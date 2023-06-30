@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConceptsPOO.Logic
+﻿namespace ConceptsPOO.Logic
 {
     public class CommisionEmployee : Employee
     {
@@ -18,7 +12,7 @@ namespace ConceptsPOO.Logic
         }
 
 
-        public decimal Sales 
+        public decimal Sales
         {
             get => _sales;
             set => _sales = ValidateSales(value);

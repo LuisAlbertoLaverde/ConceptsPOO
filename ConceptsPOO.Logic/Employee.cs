@@ -13,7 +13,7 @@
             return $"{Id}\t{FirstName} {LastName}\n\t" +
                    $"born Date .............: {BornDate,20}\n\t" +
                    $"hire ..................: {HireDate,20}\n\t" +
-                   $"Is active .............: {IsActive,20 }";
+                   $"Is active .............: {IsActive,20}";
         }
         public abstract decimal GetValueToPay();
     }

@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConceptsPOO.Logic
+﻿namespace ConceptsPOO.Logic
 {
     public class HourlyEmployee : Employee
     {
         private decimal _hourValue;
         private float _workingHours;
 
-        public decimal HourValue 
+        public decimal HourValue
         {
-            get=> _hourValue;
-            set=> _hourValue = ValidateHourValue(value);
-        } 
-        public float WorkingHours 
+            get => _hourValue;
+            set => _hourValue = ValidateHourValue(value);
+        }
+        public float WorkingHours
         {
             get => _workingHours;
 
@@ -36,7 +30,7 @@ namespace ConceptsPOO.Logic
 
         private float ValidateWorkingHours(float value)
         {
-            if (value < 0 || value > 240) 
+            if (value < 0 || value > 240)
             {
                 throw new ArgumentException("The working hours is not valid.");
             }
