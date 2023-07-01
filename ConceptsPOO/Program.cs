@@ -55,8 +55,54 @@ try
         PayRoll+=employee.GetValueToPay();
     }
     Console.WriteLine($"                                 ====================");
-    Console.WriteLine($"Pay roll                         {PayRoll,20:C2}");
+    Console.WriteLine($"TOTAL PAYROLL                  : {PayRoll,20:C2}");
+
+    var invoice1 = new Invoice()
+    {
+        Id=1234,
+        Description="Cera para bases rosada",
+        Quantity=1,
+        Price=18000m
+    };
+    var invoice2 = new Invoice()
+    {
+        Id=1235,
+        Description="Acrilico rosado 60g",
+        Quantity=1,
+        Price=17000m
+    };
+    var invoice3= new Invoice()
+    {
+        Id=1236,
+        Description="Eyectores Quirudent",
+        Quantity=1,
+        Price=20000m
+    };
+    var invoice4 = new Invoice()
+    {
+        Id=1237,
+        Description="Aplicadores adhesivo",
+        Quantity=1,
+        Price=16500m
+    };
+
+    decimal totalInvoices = 0;
+    Invoice[] invoices = new Invoice[] {invoice1, invoice2, invoice3, invoice4 };
+    foreach (var invoice in invoices)
+    {
+        Console.WriteLine(invoice);
+        totalInvoices += invoice.GetValueToPay();
+    }
+    Console.WriteLine($"                                 ====================");
+    Console.WriteLine($"TOTAL INVOICES                 : {totalInvoices,20:C2}");
+
+    Console.WriteLine($"                                 ====================");
+    Console.WriteLine($"                                 ====================");
+    Console.WriteLine($"GENERAL TOTAL                  : {PayRoll+totalInvoices,20:C2}");
+
+
 }
+
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
